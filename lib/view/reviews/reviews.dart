@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:teachs/utility/colors.dart';
+import 'package:teachs/view/reviews/add_review.dart';
+import 'package:teachs/view_controller/app_button.dart';
 
 import '../../utility/app_const.dart';
 import '../../view_controller/app_input.dart';
@@ -152,6 +154,10 @@ class _ReviewsState extends State<Reviews> {
                   ),
                 )
               ],
+            ),
+            bottomNavigationBar: Container(
+              margin: EdgeInsets.all(20),
+              child: AppButton(width: size.width, height: 55, onClick: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>AddReviews())), title: "Add Review"),
             ),
           ),
         ),

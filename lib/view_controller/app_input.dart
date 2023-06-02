@@ -34,7 +34,7 @@ class AppInput extends StatelessWidget {
       children: [
         Text("$title",
           style: TextStyle(
-            fontSize: normalFontSize,
+            fontSize: titleFontSize,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -46,6 +46,8 @@ class AppInput extends StatelessWidget {
           obscureText: isObscureText!,
           controller: controller,
           decoration: InputDecoration(
+            fillColor: AppColors.white,
+              filled: true,
               border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(5),
                   borderSide: BorderSide(width: 1, color: Colors.grey.shade300)
