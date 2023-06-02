@@ -2,6 +2,7 @@ import 'package:circle_bottom_navigation_bar/circle_bottom_navigation_bar.dart';
 import 'package:circle_bottom_navigation_bar/widgets/tab_data.dart';
 import 'package:flutter/material.dart';
 import 'package:teachs/utility/colors.dart';
+import 'package:teachs/view/assignment/create_assignment.dart';
 import 'package:teachs/view/home_work/home_work.dart';
 import 'package:teachs/view/index.dart';
 import 'package:teachs/view/profile/profile.dart';
@@ -17,6 +18,7 @@ import '../attendance/ptm-attendance/ptm_attendance.dart';
 import '../attendance/student/student_attendace.dart';
 import '../attendance/teacher/teacher-attendnace.dart';
 import '../class_scehdule/class_schedule_list.dart';
+import '../poll/poll.dart';
 import '../test/test.dart';
 
 class Home extends StatefulWidget {
@@ -407,7 +409,7 @@ class _HomeState extends State<Home> {
                               ItemButtonWidget(
                                 image: "assets/icons/poll.png",
                                 title: "Poll",
-                                onClick: (){},
+                                onClick: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>Poll())),
                               ),
 
                             ],
@@ -440,7 +442,7 @@ class _HomeState extends State<Home> {
                           child:  ItemButtonWidget(
                             image: "assets/icons/create-assignment.png",
                             title: "Create Assignment",
-                            onClick: (){},
+                            onClick: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateAssignment())),
                           ),
                         ),
                         Container(
