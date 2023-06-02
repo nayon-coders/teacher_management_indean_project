@@ -34,7 +34,7 @@ class AppInput extends StatelessWidget {
       children: [
         Text("$title",
           style: TextStyle(
-            fontSize: titleFontSize,
+            fontSize: normalFontSize,
             fontWeight: FontWeight.w600,
           ),
         ),
