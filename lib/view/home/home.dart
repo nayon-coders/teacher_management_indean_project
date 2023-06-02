@@ -5,6 +5,7 @@ import 'package:teachs/utility/colors.dart';
 import 'package:teachs/view/home_work/home_work.dart';
 import 'package:teachs/view/index.dart';
 import 'package:teachs/view/profile/profile.dart';
+import 'package:teachs/view/query/query.dart';
 import 'package:teachs/view/reviews/reviews.dart';
 import 'package:teachs/view/syllabus/syllabus.dart';
 
@@ -401,7 +402,7 @@ class _HomeState extends State<Home> {
                               ItemButtonWidget(
                                 image: "assets/icons/query.png",
                                 title: "Query",
-                                onClick: (){},
+                                onClick: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>Querys())),
                               ),
                               ItemButtonWidget(
                                 image: "assets/icons/poll.png",
