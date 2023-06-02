@@ -1,6 +1,7 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
+import 'package:teachs/utility/app_const.dart';
 import 'package:teachs/utility/colors.dart';
 import 'package:teachs/view_controller/app_button.dart';
 
@@ -72,7 +73,7 @@ class _TestUploadAnswerState extends State<TestUploadAnswer> {
                     children: [
                       Text("Fill the required field",
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: titleFontSize,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -126,7 +127,7 @@ class _TestUploadAnswerState extends State<TestUploadAnswer> {
                             Text("Upload files",
                               style: TextStyle(
                                   fontWeight: FontWeight.w500,
-                                  fontSize: 16
+                                  fontSize: normalFontSize
                               ),
                             ),
                             SizedBox(height: 10,),
@@ -187,8 +188,8 @@ class _TestUploadAnswerState extends State<TestUploadAnswer> {
       children: [
         Text(title,
           style: TextStyle(
-              fontWeight: FontWeight.w500,
-              fontSize: 16
+              fontWeight: FontWeight.w600,
+              fontSize: normalFontSize
           ),
         ),
         SizedBox(height: 10,),
@@ -203,8 +204,8 @@ class _TestUploadAnswerState extends State<TestUploadAnswer> {
               hint: Text(
                 '${stringList[0]}',
                 style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.grey
+                    fontSize: normalFontSize,
+                    color: AppColors.black
                 ),
               ),
               items: stringList
@@ -212,8 +213,8 @@ class _TestUploadAnswerState extends State<TestUploadAnswer> {
                 value: item,
                 child: Text(
                   item,
-                  style: const TextStyle(
-                    fontSize: 14,
+                  style:  TextStyle(
+                    fontSize: normalFontSize,
                   ),
                 ),
               ))

@@ -4,6 +4,7 @@ import 'package:teachs/utility/colors.dart';
 import 'package:teachs/view_controller/app_button.dart';
 import 'package:teachs/view_controller/app_top_bar.dart';
 import 'package:intl/intl.dart';
+import '../../utility/app_const.dart';
 import '../../view_controller/app_input.dart';
 
 class CreateTest extends StatefulWidget {
@@ -127,8 +128,8 @@ class _CreateTestState extends State<CreateTest> {
                       SizedBox(height: 20,),
                       Text("Test schedule",
                         style: TextStyle(
-                          fontSize: 17,
-                          fontWeight: FontWeight.w500,
+                          fontSize: normalFontSize,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                       Row(
@@ -193,8 +194,8 @@ class _CreateTestState extends State<CreateTest> {
       children: [
         Text(title,
           style: TextStyle(
-              fontWeight: FontWeight.w500,
-              fontSize: 16
+              fontWeight: FontWeight.w600,
+              fontSize: normalFontSize
           ),
         ),
         SizedBox(height: 10,),
@@ -209,7 +210,7 @@ class _CreateTestState extends State<CreateTest> {
               hint: Text(
                 '${stringList[0]}',
                 style: TextStyle(
-                    fontSize: 16,
+                    fontSize: normalFontSize,
                     color: AppColors.black
                 ),
               ),
@@ -218,8 +219,8 @@ class _CreateTestState extends State<CreateTest> {
                 value: item,
                 child: Text(
                   item,
-                  style: const TextStyle(
-                    fontSize: 14,
+                  style:  TextStyle(
+                    fontSize: normalFontSize,
                   ),
                 ),
               ))

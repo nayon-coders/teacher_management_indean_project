@@ -1,5 +1,6 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
+import 'package:teachs/utility/app_const.dart';
 import 'package:teachs/utility/colors.dart';
 import 'package:teachs/view_controller/app_input.dart';
 import 'package:teachs/view_controller/app_top_bar.dart';
@@ -84,7 +85,7 @@ class _StudentAttendanceState extends State<StudentAttendance> {
                       padding: EdgeInsets.only(left: 20, right: 20, bottom: 15, top: 10),
                       child:  Text("Fill the required field",
                         style: TextStyle(
-                          fontSize: 17,
+                          fontSize: titleFontSize,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -143,7 +144,7 @@ class _StudentAttendanceState extends State<StudentAttendance> {
                                 ),
                                 child: Center(child: Text("Done",
                                   style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: normalFontSize,
                                       fontWeight: FontWeight.w500,
                                       color: AppColors.white
                                   ),
@@ -165,7 +166,7 @@ class _StudentAttendanceState extends State<StudentAttendance> {
                       padding: EdgeInsets.only(left: 20, right: 20, bottom: 15, top: 10),
                       child:  Text("Showing results according to your search ",
                         style: TextStyle(
-                          fontSize: 17,
+                          fontSize: titleFontSize,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -199,21 +200,25 @@ class _StudentAttendanceState extends State<StudentAttendance> {
                                 Text("Roll No.",
                                   style: TextStyle(
                                     color: AppColors.white,
+                                    fontSize: normalFontSize
                                   ),
                                 ),
                                 Text("Name",
                                   style: TextStyle(
                                     color: AppColors.white,
+                                      fontSize: normalFontSize
                                   ),
                                 ),
                                 Text("Status",
                                   style: TextStyle(
                                     color: AppColors.white,
+                                      fontSize: normalFontSize
                                   ),
                                 ),
                                 Text("App lavel",
                                   style: TextStyle(
                                     color: AppColors.white,
+                                      fontSize: normalFontSize
                                   ),
                                 )
                               ],
@@ -317,8 +322,8 @@ class _StudentAttendanceState extends State<StudentAttendance> {
       children: [
         Text(title,
           style: TextStyle(
-              fontWeight: FontWeight.w500,
-              fontSize: 16
+              fontWeight: FontWeight.w600,
+              fontSize: normalFontSize
           ),
         ),
         SizedBox(height: 10,),
@@ -333,7 +338,7 @@ class _StudentAttendanceState extends State<StudentAttendance> {
               hint: Text(
                 '${stringList[0]}',
                 style: TextStyle(
-                    fontSize: 16,
+                    fontSize: normalFontSize,
                     color: AppColors.black
                 ),
               ),
@@ -342,8 +347,8 @@ class _StudentAttendanceState extends State<StudentAttendance> {
                 value: item,
                 child: Text(
                   item,
-                  style: const TextStyle(
-                    fontSize: 14,
+                  style:  TextStyle(
+                    fontSize: normalFontSize,
                   ),
                 ),
               ))
@@ -377,6 +382,7 @@ class _StudentAttendanceState extends State<StudentAttendance> {
                               child: Text("45",
                                 style: TextStyle(
                                   color: AppColors.black,
+                                    fontSize: normalFontSize
                                 ),
                               ),
                             ),
@@ -387,6 +393,7 @@ class _StudentAttendanceState extends State<StudentAttendance> {
                                 overflow: TextOverflow.clip,
                                 style: TextStyle(
                                   color: AppColors.black,
+                                    fontSize: normalFontSize
                                 ),
                               ),
                             ),
@@ -414,7 +421,7 @@ class _StudentAttendanceState extends State<StudentAttendance> {
                                 hint: Text(
                                   '${attendanceItems[0]}',
                                   style: TextStyle(
-                                    fontSize: 14,
+                                      fontSize: normalFontSize,
                                     color: Theme.of(context).hintColor,
                                   ),
                                 ),
@@ -423,8 +430,8 @@ class _StudentAttendanceState extends State<StudentAttendance> {
                                   value: item,
                                   child: Text(
                                     item,
-                                    style: const TextStyle(
-                                      fontSize: 14,
+                                    style:  TextStyle(
+                                        fontSize: normalFontSize
                                     ),
                                   ),
                                 ))
@@ -473,7 +480,7 @@ class _StudentAttendanceState extends State<StudentAttendance> {
                                       color: AppColors.mainColor,
                                       borderRadius: BorderRadius.circular(5)
                                   ),
-                                  child: Text("${appLavleText[0]}", style: TextStyle(color: AppColors.white),),
+                                  child: Text("${appLavleText[0]}", style: TextStyle(color: AppColors.white,  fontSize: normalFontSize),),
                                 ),
                                 items: appLavleText
                                     .map((item) => DropdownMenuItem<String>(
@@ -484,7 +491,7 @@ class _StudentAttendanceState extends State<StudentAttendance> {
                                         color: item== "YES" ? AppColors.mainColor : AppColors.red,
                                         borderRadius: BorderRadius.circular(5)
                                     ),
-                                    child: Text("$item", style: TextStyle(color: AppColors.white),),
+                                    child: Text("$item", style: TextStyle(color: AppColors.white,  fontSize: normalFontSize),),
                                   ),
                                 ))
                                     .toList(),

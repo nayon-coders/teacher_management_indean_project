@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:teachs/utility/app_const.dart';
 
 import '../utility/colors.dart';
 
@@ -7,8 +8,8 @@ class RichTextWidget extends StatelessWidget {
     Key? key,
     required this.leftText,
     required this.rightText,
-    this.leftTextSize = 17.00,
-    this.rightTextSize = 17.00,
+    this.leftTextSize = 12.00,
+    this.rightTextSize = 14.00,
     this.rightTextColor = AppColors.textColor,
     this.leftTextColor = AppColors.textColor,
   }) : super(key: key);

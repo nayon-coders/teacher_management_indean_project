@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:teachs/utility/app_const.dart';
 import 'package:teachs/utility/colors.dart';
 import 'package:teachs/view_controller/app_button.dart';
 import 'package:teachs/view_controller/app_top_bar.dart';
@@ -143,11 +144,11 @@ class _TeacherAttendanceState extends State<TeacherAttendance> {
               firstDay: DateTime.utc(2022),
               lastDay: DateTime.utc(2500),
               focusedDay: _focusedDay,
-              rowHeight: 55,
+              rowHeight: 40,
               calendarFormat: _calendarFormat,
               calendarStyle: CalendarStyle(
-                cellMargin: EdgeInsets.only(top: 15),
-                cellPadding: EdgeInsets.all(5),
+                cellMargin: EdgeInsets.only(top: 2),
+                cellPadding: EdgeInsets.all(2),
                 outsideDaysVisible: true,
                 defaultDecoration: BoxDecoration(
                   //color: Colors.black.withOpacity(0.2),
@@ -156,25 +157,25 @@ class _TeacherAttendanceState extends State<TeacherAttendance> {
                 ),
                 rangeHighlightScale: 30.0,
                 weekNumberTextStyle: TextStyle(
-                    fontSize: 20
+                    fontSize: titleFontSize
                 ),
                 markerSize: 100.0,
                 todayTextStyle: TextStyle(
-                  fontSize: 16, color: AppColors.red,
-                  fontWeight: FontWeight.w600
+                    fontSize: titleFontSize, color: AppColors.red,
+                    fontWeight: FontWeight.w600
                 ),
                 todayDecoration: BoxDecoration(
-                    //color: AppColors.red,
+                  //color: AppColors.red,
                     shape: BoxShape.circle
                 ),
                 weekendTextStyle: TextStyle(color: AppColors.white,),
                 defaultTextStyle: TextStyle(
                     color: AppColors.black,
-                    fontSize: 15,
+                    fontSize: titleFontSize,
                     fontWeight: FontWeight.w600
                 ),
                 selectedTextStyle: TextStyle(
-                    fontSize: 16,
+                    fontSize: bigTitleFontSize,
                     color: AppColors.mainColor,
                     fontWeight: FontWeight.w600
                 ),
@@ -188,10 +189,11 @@ class _TeacherAttendanceState extends State<TeacherAttendance> {
                   color: AppColors.black,
                 ),
                 weekendStyle: TextStyle(
-                  color: AppColors.white,
+                  color: AppColors.red,
                 ),
+
               ),
-              weekendDays: [DateTime.friday],
+              weekendDays: [DateTime.sunday],
               headerStyle: HeaderStyle(
                   titleCentered: true,
                   headerMargin: const EdgeInsets.only(top: 10, bottom: 40, left: 50, right: 50),
@@ -296,14 +298,14 @@ class _TeacherAttendanceState extends State<TeacherAttendance> {
                 Text("Total working days",
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
-                    fontSize: 16,
+                    fontSize: titleFontSize,
                   ),
                 ),
 
                 Text("26 Days",
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
-                    fontSize: 16,
+                    fontSize: titleFontSize,
                     color: AppColors.mainColor
                   ),
                 ),
@@ -335,7 +337,7 @@ class _TeacherAttendanceState extends State<TeacherAttendance> {
                   children: [
                     Text("Total Absent",
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: bigTitleFontSize,
                         fontWeight: FontWeight.w600
                       ),
                     ),
@@ -371,7 +373,7 @@ class _TeacherAttendanceState extends State<TeacherAttendance> {
                   children: [
                     Text("Total Absent",
                       style: TextStyle(
-                          fontSize: 18,
+                          fontSize: bigTitleFontSize,
                           fontWeight: FontWeight.w600
                       ),
                     ),
@@ -420,11 +422,11 @@ class _TeacherAttendanceState extends State<TeacherAttendance> {
               firstDay: DateTime.utc(2022),
               lastDay: DateTime.utc(2500),
               focusedDay: _focusedDay,
-              rowHeight: 55,
+              rowHeight: 40,
               calendarFormat: _calendarFormat,
               calendarStyle: CalendarStyle(
-                cellMargin: EdgeInsets.only(top: 15),
-                cellPadding: EdgeInsets.all(5),
+                cellMargin: EdgeInsets.only(top: 2),
+                cellPadding: EdgeInsets.all(2),
                 outsideDaysVisible: true,
                 defaultDecoration: BoxDecoration(
                   //color: Colors.black.withOpacity(0.2),
@@ -433,11 +435,11 @@ class _TeacherAttendanceState extends State<TeacherAttendance> {
                 ),
                 rangeHighlightScale: 30.0,
                 weekNumberTextStyle: TextStyle(
-                    fontSize: 20
+                    fontSize: titleFontSize
                 ),
                 markerSize: 100.0,
                 todayTextStyle: TextStyle(
-                    fontSize: 16, color: AppColors.red,
+                    fontSize: titleFontSize, color: AppColors.red,
                     fontWeight: FontWeight.w600
                 ),
                 todayDecoration: BoxDecoration(
@@ -447,11 +449,11 @@ class _TeacherAttendanceState extends State<TeacherAttendance> {
                 weekendTextStyle: TextStyle(color: AppColors.white,),
                 defaultTextStyle: TextStyle(
                     color: AppColors.black,
-                    fontSize: 15,
+                    fontSize: titleFontSize,
                     fontWeight: FontWeight.w600
                 ),
                 selectedTextStyle: TextStyle(
-                    fontSize: 16,
+                    fontSize: bigTitleFontSize,
                     color: AppColors.mainColor,
                     fontWeight: FontWeight.w600
                 ),
@@ -469,7 +471,7 @@ class _TeacherAttendanceState extends State<TeacherAttendance> {
                 ),
 
               ),
-              weekendDays: [DateTime.friday],
+              weekendDays: [DateTime.sunday],
               headerStyle: HeaderStyle(
                   titleCentered: true,
                   headerMargin: const EdgeInsets.only(top: 10, bottom: 40, left: 50, right: 50),
@@ -479,9 +481,9 @@ class _TeacherAttendanceState extends State<TeacherAttendance> {
                     border: Border.all(width: 0, color: Colors.transparent),
                     borderRadius: BorderRadius.circular(100),
                   ),
-                  titleTextStyle: const TextStyle(
+                  titleTextStyle:  TextStyle(
                     fontWeight: FontWeight.w600,
-                    fontSize: 17,
+                    fontSize: bigTitleFontSize,
                     color: AppColors.black,
                   ),
                   formatButtonVisible: false,
@@ -534,7 +536,7 @@ class _TeacherAttendanceState extends State<TeacherAttendance> {
           Text("Holidays for  May, 23",
             style: TextStyle(
               fontWeight: FontWeight.w600,
-              fontSize: 16,
+              fontSize: titleFontSize,
             ),
           ),
           SizedBox(height: 10,),
@@ -559,14 +561,14 @@ class _TeacherAttendanceState extends State<TeacherAttendance> {
                 Text("International Labour Day",
                   style: TextStyle(
                     fontWeight: FontWeight.w300,
-                    fontSize: 14,
+                    fontSize: normalFontSize,
                   ),
                 ),
 
                 Text("01, May",
                   style: TextStyle(
                       fontWeight: FontWeight.w600,
-                      fontSize: 16,
+                      fontSize: titleFontSize,
                       color: AppColors.red
                   ),
                 ),
@@ -595,14 +597,14 @@ class _TeacherAttendanceState extends State<TeacherAttendance> {
                 Text("Bodho purnima",
                   style: TextStyle(
                     fontWeight: FontWeight.w300,
-                    fontSize: 14,
+                    fontSize: normalFontSize,
                   ),
                 ),
 
                 Text("23, May",
                   style: TextStyle(
                       fontWeight: FontWeight.w600,
-                      fontSize: 16,
+                      fontSize: titleFontSize,
                       color: AppColors.red
                   ),
                 ),
@@ -626,8 +628,8 @@ class _TeacherAttendanceState extends State<TeacherAttendance> {
                     border: Border.all(width: 1, color: color)
                   ),
                   child: Container(
-                      width: 12,
-                      height: 12,
+                      width: 10,
+                      height: 10,
                       decoration: BoxDecoration(
                          color: color,
                          borderRadius: BorderRadius.circular(100),
@@ -635,8 +637,12 @@ class _TeacherAttendanceState extends State<TeacherAttendance> {
                       ),
                   )
                 ),
-                SizedBox(width: 5,),
-                Text(title)
+                SizedBox(width: 3,),
+                Text(title,
+                  style: TextStyle(
+                    fontSize: smallFontSize
+                  ),
+                )
               ],
             );
   }

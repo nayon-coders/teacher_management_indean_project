@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:teachs/utility/app_const.dart';
 import 'package:teachs/utility/colors.dart';
 
 import '../../view_controller/app_top_bar.dart';
@@ -37,14 +38,14 @@ class _ClassScheduleListState extends State<ClassScheduleList> {
                   children: [
                     Text("Search schedule by date ",
                       style: TextStyle(
-                        fontSize: 17,
+                        fontSize: titleFontSize,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                     SizedBox(height: 10,),
                     Container(
                       width: size.width,
-                      height: 60,
+                      height: 50,
                       padding: EdgeInsets.only(left: 20, right: 20),
                       decoration: BoxDecoration(
                         color: AppColors.white,
@@ -56,7 +57,7 @@ class _ClassScheduleListState extends State<ClassScheduleList> {
                         children: [
                           Text("Pick a date",
                             style: TextStyle(
-                              fontSize: 15,
+                              fontSize: normalFontSize,
                               color: Colors.grey
                             ),
                           ),
@@ -67,7 +68,7 @@ class _ClassScheduleListState extends State<ClassScheduleList> {
                     SizedBox(height: 20,),
 
                     SizedBox(
-                      height: 200 *10 ,
+                      height: 170 *10 ,
                       child: ListView.builder(
                         itemCount: 10,
                         shrinkWrap: true,
@@ -75,13 +76,15 @@ class _ClassScheduleListState extends State<ClassScheduleList> {
                           return Container(
                             margin: EdgeInsets.only(bottom: 10),
                             width: size.width,
-                            height: 200,
+                            height: 160,
                             child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
 
                               children: [
                                 Container(
                                   width: size.width,
-                                  height: 160,
+                                  height: 130,
                                   padding: EdgeInsets.all(15),
                                   decoration: BoxDecoration(
                                       color: AppColors.white,
@@ -89,8 +92,8 @@ class _ClassScheduleListState extends State<ClassScheduleList> {
                                       border: Border.all(width: 1, color: Color(0xffD5CDFF))
                                   ),
                                   child: Column(
-                                    // mainAxisAlignment: MainAxisAlignment.start,
-                                    // crossAxisAlignment: CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -141,8 +144,8 @@ class _ClassScheduleListState extends State<ClassScheduleList> {
                                 Align(
                                   alignment: Alignment.center,
                                   child: Container(
-                                    width: 120,
-                                    height: 40,
+                                    width: 90,
+                                    height: 30,
                                     transform: Matrix4.translationValues(0.0, -20.0, 0.0),
                                     decoration: BoxDecoration(
                                         color: AppColors.white,
@@ -152,7 +155,7 @@ class _ClassScheduleListState extends State<ClassScheduleList> {
                                     child: Center(child: Text("Period-4",
                                       style: TextStyle(
                                           fontWeight: FontWeight.w600,
-                                          fontSize: 16
+                                          fontSize: normalFontSize
                                       ),
                                     ),),
                                   ),

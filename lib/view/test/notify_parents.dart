@@ -5,6 +5,8 @@ import 'package:teachs/view_controller/app_button.dart';
 import 'package:teachs/view_controller/app_input.dart';
 import 'package:teachs/view_controller/app_top_bar.dart';
 
+import '../../utility/app_const.dart';
+
 class NotifyParents extends StatefulWidget {
   const NotifyParents({Key? key}) : super(key: key);
 
@@ -117,15 +119,15 @@ class _NotifyParentsState extends State<NotifyParents> {
       children: [
         Text(title,
           style: TextStyle(
-              fontWeight: FontWeight.w500,
-              fontSize: 16
+              fontWeight: FontWeight.w600,
+              fontSize: normalFontSize
           ),
         ),
         SizedBox(height: 10,),
         Container(
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(5),
-              border: Border.all(width: 1, color: AppColors.borderColor)
+              border: Border.all(width: 1, color: Colors.grey.shade400)
           ),
           child: DropdownButtonHideUnderline(
             child: DropdownButton2(
@@ -133,7 +135,7 @@ class _NotifyParentsState extends State<NotifyParents> {
               hint: Text(
                 '${stringList[0]}',
                 style: TextStyle(
-                    fontSize: 16,
+                    fontSize: normalFontSize,
                     color: AppColors.black
                 ),
               ),
@@ -142,8 +144,8 @@ class _NotifyParentsState extends State<NotifyParents> {
                 value: item,
                 child: Text(
                   item,
-                  style: const TextStyle(
-                    fontSize: 14,
+                  style:  TextStyle(
+                    fontSize: normalFontSize,
                   ),
                 ),
               ))

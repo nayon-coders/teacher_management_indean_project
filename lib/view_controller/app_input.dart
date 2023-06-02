@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:teachs/utility/app_const.dart';
 
 import '../utility/colors.dart';
 
@@ -33,8 +34,8 @@ class AppInput extends StatelessWidget {
       children: [
         Text("$title",
           style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w500,
+            fontSize: normalFontSize,
+            fontWeight: FontWeight.w600,
           ),
         ),
         SizedBox(height: titleMargin,),
@@ -59,9 +60,12 @@ class AppInput extends StatelessWidget {
                 borderSide: BorderSide(width: 1, color:Colors.grey.shade300)
             ),
               suffixIcon: isSuffix? Icon(suFixIcon):SizedBox(),
-              contentPadding: EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
+              contentPadding: EdgeInsets.only(left: 20, right: 20, top: 8, bottom: 8),
 
               hintText: "$hintText",
+            hintStyle: TextStyle(
+              fontSize: normalFontSize
+            )
           ),
           validator: (v){
             if(isValidation && v!.isEmpty){

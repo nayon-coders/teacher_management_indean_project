@@ -5,8 +5,10 @@ import 'package:teachs/utility/colors.dart';
 import 'package:teachs/view/home_work/home_work.dart';
 import 'package:teachs/view/index.dart';
 import 'package:teachs/view/profile/profile.dart';
+import 'package:teachs/view/reviews/reviews.dart';
 import 'package:teachs/view/syllabus/syllabus.dart';
 
+import '../../utility/app_const.dart';
 import '../../view_controller/app_drawer.dart';
 import '../../view_controller/app_iconButton.dart';
 import '../../view_controller/rich_text.dart';
@@ -40,7 +42,7 @@ class _HomeState extends State<Home> {
               //top section
               Container(
                 width: size.width,
-                height: 250,
+                height: 230,
                 padding: EdgeInsets.all(30),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
@@ -65,7 +67,7 @@ class _HomeState extends State<Home> {
                         Text("Dashboard",
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
-                            fontSize: 22,
+                            fontSize: bigTitleFontSize,
                             color: AppColors.white
                           ),
                         ),
@@ -81,9 +83,10 @@ class _HomeState extends State<Home> {
                                   color: AppColors.red,
                                   borderRadius: BorderRadius.circular(100)
                                 ),
-                                child: const Center(child: Text('10',
+                                child:  Center(child: Text('10',
                                   style: TextStyle(
-                                    color: AppColors.white, fontSize: 9
+                                    color: AppColors.white,
+                                      fontSize: smallFontSize
                                   ),
                                 ),),
                               ),
@@ -112,7 +115,7 @@ class _HomeState extends State<Home> {
                               children: [
                                 Text("Nayon Talukder",
                                   style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: bigTitleFontSize,
                                       fontWeight: FontWeight.w600,
                                       color: AppColors.white
                                   ),
@@ -125,7 +128,7 @@ class _HomeState extends State<Home> {
                                       width: size.width*.50,
                                       child: Text("St. Mary’s Sr. Sec. School",
                                         style: TextStyle(
-                                            fontSize: 15,
+                                            fontSize:normalFontSize,
                                             fontWeight: FontWeight.w400,
                                             color: AppColors.white
                                         ),
@@ -135,7 +138,7 @@ class _HomeState extends State<Home> {
                                       width: size.width*.30,
                                       child: Text("28 April, 23",
                                         style: TextStyle(
-                                            fontSize: 12,
+                                            fontSize: normalFontSize,
                                             fontWeight: FontWeight.w400,
                                             color: AppColors.white
                                         ),
@@ -166,7 +169,7 @@ class _HomeState extends State<Home> {
                         Text("Today`s schedule",
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
-                            fontSize: 20,
+                            fontSize: bigTitleFontSize,
                           ),
                         ),
                         InkWell(
@@ -178,7 +181,7 @@ class _HomeState extends State<Home> {
                               Text("SEE ALL",
                                 style: TextStyle(
                                   fontWeight: FontWeight.w600,
-                                  fontSize: 17,
+                                  fontSize: titleFontSize,
                                   color: AppColors.mainColor
                                 ),
                               ),
@@ -192,21 +195,21 @@ class _HomeState extends State<Home> {
 
                     SizedBox(height: 20,),
                     SizedBox(
-                      height: 200,
+                      height: 180,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemCount: 10,
                         itemBuilder: (_, index){
                           return Container(
-                            width: 250,
-                            height: 180,
-                           margin: EdgeInsets.only(left: 15),
+                            width: 200,
+                            height: 150,
+                            margin: EdgeInsets.only(left: 10),
                             child: Column(
 
                               children: [
                                 Container(
-                                  width: 250,
-                                  height: 160,
+                                  width: 200,
+                                  height: 140,
                                   padding: EdgeInsets.all(10),
                                   decoration: BoxDecoration(
                                       color: AppColors.white,
@@ -256,8 +259,8 @@ class _HomeState extends State<Home> {
                                   ),
                                 ),
                                 Container(
-                                  width: 120,
-                                  height: 40,
+                                  width: 80,
+                                  height: 33,
                                   transform: Matrix4.translationValues(0.0, -20.0, 0.0),
                                   decoration: BoxDecoration(
                                       color: AppColors.white,
@@ -267,7 +270,7 @@ class _HomeState extends State<Home> {
                                   child: Center(child: Text("Period-4",
                                     style: TextStyle(
                                         fontWeight: FontWeight.w600,
-                                        fontSize: 16
+                                        fontSize: normalFontSize
                                     ),
                                   ),),
                                 ),
@@ -280,11 +283,11 @@ class _HomeState extends State<Home> {
 
 
                     //attendance overview
-                    SizedBox(height: 20,),
+                    SizedBox(height: 10,),
                     Text("Attendance overview",
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
-                        fontSize: 20,
+                        fontSize: bigTitleFontSize,
                       ),
                     ),
                     SizedBox(height: 10,),
@@ -325,11 +328,11 @@ class _HomeState extends State<Home> {
 
 
                     //Student activity
-                    SizedBox(height: 30,),
+                    SizedBox(height: 15,),
                     Text("Student Activity",
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
-                        fontSize: 20,
+                        fontSize: bigTitleFontSize,
                       ),
                     ),
                     SizedBox(height: 10,),
@@ -370,11 +373,11 @@ class _HomeState extends State<Home> {
 
 
                     //Student activity
-                    SizedBox(height: 30,),
+                    SizedBox(height: 15,),
                     Text("My feed",
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
-                        fontSize: 20,
+                        fontSize: bigTitleFontSize,
                       ),
                     ),
                     SizedBox(height: 10,),
@@ -393,7 +396,7 @@ class _HomeState extends State<Home> {
                               ItemButtonWidget(
                                 image: "assets/icons/review.png",
                                 title: "Reviews",
-                                onClick: (){},
+                                onClick: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>Reviews())),
                               ),
                               ItemButtonWidget(
                                 image: "assets/icons/query.png",
@@ -415,11 +418,11 @@ class _HomeState extends State<Home> {
 
 
                     //Assignment
-                    SizedBox(height: 30,),
+                    SizedBox(height: 15,),
                     Text("Assignment",
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
-                        fontSize: 20,
+                        fontSize: bigTitleFontSize,
                       ),
                     ),
                     SizedBox(height: 10,),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:teachs/utility/app_const.dart';
 
 import '../utility/colors.dart';
 class AppTopBar extends StatelessWidget {
@@ -40,7 +41,7 @@ class AppTopBar extends StatelessWidget {
               child: Text("$title",
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
-                  fontSize: 18,
+                  fontSize: bigTitleFontSize,
                   color: AppColors.white,
                 ),
               ),

@@ -4,6 +4,7 @@ import 'package:simple_circular_progress_bar/simple_circular_progress_bar.dart';
 import 'package:teachs/utility/colors.dart';
 import 'package:teachs/view_controller/app_input.dart';
 
+import '../../utility/app_const.dart';
 import '../../view_controller/app_top_bar.dart';
 
 class Syllabus extends StatefulWidget {
@@ -71,7 +72,7 @@ class _SyllabusState extends State<Syllabus> {
                     children: [
                       Text("Fill the required field",
                         style: TextStyle(
-                          fontSize: 17,
+                          fontSize: titleFontSize,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -125,7 +126,7 @@ class _SyllabusState extends State<Syllabus> {
                                   ),
                                   child: Center(child: Text("Done",
                                     style: TextStyle(
-                                        fontSize: 15,
+                                        fontSize: titleFontSize,
                                         fontWeight: FontWeight.w500,
                                         color: AppColors.white
                                     ),
@@ -168,7 +169,7 @@ class _SyllabusState extends State<Syllabus> {
                       children: [
                         Text("Chapter 1",
                           style: TextStyle(
-                            fontSize: 15,
+                            fontSize: titleFontSize,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -192,7 +193,7 @@ class _SyllabusState extends State<Syllabus> {
                                 child: Center(
                                   child: Text("Topic",
                                     style: TextStyle(
-                                      fontSize: 14,
+                                      fontSize: normalFontSize,
                                       color: AppColors.white
                                     ),
                                   ),
@@ -203,7 +204,7 @@ class _SyllabusState extends State<Syllabus> {
                                 child: Center(
                                   child: Text("Syllabus",
                                     style: TextStyle(
-                                        fontSize: 14,
+                                        fontSize: normalFontSize,
                                         color: AppColors.white
                                     ),
                                   ),
@@ -214,7 +215,7 @@ class _SyllabusState extends State<Syllabus> {
                                 child: Center(
                                   child: Text("Progress",
                                     style: TextStyle(
-                                        fontSize: 14,
+                                        fontSize: normalFontSize,
                                         color: AppColors.white
                                     ),
                                   ),
@@ -233,8 +234,8 @@ class _SyllabusState extends State<Syllabus> {
                                   width: size.width*.25,
                                   child: Text("Classification of present tense & use.",
                                     style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w300
+                                      fontSize: normalFontSize,
+                                      fontWeight: FontWeight.w400
                                     ),
                                   ),
                                 ),
@@ -242,8 +243,8 @@ class _SyllabusState extends State<Syllabus> {
                                   width: size.width*.45,
                                   child: Text("Lorem ipsum is placehold text commonly used in bfdd the graphic commonly .",
                                     style: TextStyle(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w300
+                                        fontSize: normalFontSize,
+                                        fontWeight: FontWeight.w400
                                     ),
                                   ),
                                 ),
@@ -282,8 +283,8 @@ class _SyllabusState extends State<Syllabus> {
                                   width: size.width*.25,
                                   child: Text("Classification of present tense & use.",
                                     style: TextStyle(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w300
+                                        fontSize: normalFontSize,
+                                        fontWeight: FontWeight.w400
                                     ),
                                   ),
                                 ),
@@ -291,8 +292,8 @@ class _SyllabusState extends State<Syllabus> {
                                   width: size.width*.45,
                                   child: Text("Lorem ipsum is placehold text commonly used in bfdd the graphic commonly .",
                                     style: TextStyle(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w300
+                                        fontSize: normalFontSize,
+                                        fontWeight: FontWeight.w400
                                     ),
                                   ),
                                 ),
@@ -348,8 +349,8 @@ class _SyllabusState extends State<Syllabus> {
       children: [
         Text(title,
           style: TextStyle(
-              fontWeight: FontWeight.w500,
-              fontSize: 16
+              fontWeight: FontWeight.w600,
+              fontSize: normalFontSize
           ),
         ),
         SizedBox(height: 10,),
@@ -364,7 +365,7 @@ class _SyllabusState extends State<Syllabus> {
               hint: Text(
                 '${stringList[0]}',
                 style: TextStyle(
-                    fontSize: 16,
+                    fontSize: normalFontSize,
                     color: AppColors.black
                 ),
               ),
@@ -373,8 +374,8 @@ class _SyllabusState extends State<Syllabus> {
                 value: item,
                 child: Text(
                   item,
-                  style: const TextStyle(
-                    fontSize: 14,
+                  style:  TextStyle(
+                    fontSize: normalFontSize,
                   ),
                 ),
               ))

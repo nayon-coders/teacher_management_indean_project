@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../utility/app_const.dart';
 import '../utility/colors.dart';
 class ItemButtonWidget extends StatelessWidget {
   const ItemButtonWidget({
@@ -32,8 +33,8 @@ class ItemButtonWidget extends StatelessWidget {
           SizedBox(height: 5,),
           Text("$title",
             style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 14
+                fontWeight: FontWeight.w500,
+                fontSize: normalFontSize,
             ),
           )
         ],

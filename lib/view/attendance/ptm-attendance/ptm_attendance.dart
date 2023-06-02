@@ -4,6 +4,7 @@ import 'package:teachs/utility/colors.dart';
 import 'package:teachs/view_controller/app_button.dart';
 import 'package:teachs/view_controller/app_top_bar.dart';
 import 'package:intl/intl.dart';
+import '../../../utility/app_const.dart';
 import '../../../view_controller/app_input.dart';
 
 class PTMAttendance extends StatefulWidget {
@@ -78,7 +79,7 @@ class _PTMAttendanceState extends State<PTMAttendance> {
                       padding: EdgeInsets.only(left: 20, right: 20, bottom: 15, top: 10),
                       child:  Text("Fill the required field",
                         style: TextStyle(
-                          fontSize: 17,
+                          fontSize: titleFontSize,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -143,7 +144,7 @@ class _PTMAttendanceState extends State<PTMAttendance> {
                                 ),
                                 child: Center(child: Text("Done",
                                   style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: titleFontSize,
                                       fontWeight: FontWeight.w500,
                                       color: AppColors.white
                                   ),
@@ -161,7 +162,7 @@ class _PTMAttendanceState extends State<PTMAttendance> {
                       padding: EdgeInsets.only(left: 20, right: 20, bottom: 15, top: 30),
                       child:  Text("Showing results according to your search ",
                         style: TextStyle(
-                          fontSize: 17,
+                          fontSize: titleFontSize,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -195,16 +196,19 @@ class _PTMAttendanceState extends State<PTMAttendance> {
                                 Text("Roll No.",
                                   style: TextStyle(
                                     color: AppColors.white,
+                                    fontSize: normalFontSize
                                   ),
                                 ),
                                 Text("Name",
                                   style: TextStyle(
                                     color: AppColors.white,
+                                    fontSize: normalFontSize
                                   ),
                                 ),
                                 Text("Status",
                                   style: TextStyle(
                                     color: AppColors.white,
+                                    fontSize: normalFontSize
                                   ),
                                 ),
 
@@ -294,55 +298,55 @@ class _PTMAttendanceState extends State<PTMAttendance> {
     required List stringList
   }) {
     return Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(title,
-              style: TextStyle(
-                fontWeight: FontWeight.w500,
-                fontSize: 16
-              ),
-            ),
-            SizedBox(height: 10,),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-                border: Border.all(width: 1, color: Colors.grey.shade400)
-              ),
-              child: DropdownButtonHideUnderline(
-                child: DropdownButton2(
-                  isExpanded: true,
-                  hint: Text(
-                    '${stringList[0]}',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: AppColors.black
-                    ),
-                  ),
-                  items: stringList
-                      .map((item) => DropdownMenuItem<String>(
-                    value: item,
-                    child: Text(
-                      item,
-                      style: const TextStyle(
-                        fontSize: 14,
-                      ),
-                    ),
-                  ))
-                      .toList(),
-                  value: selectedValue,
-                  onChanged: (value) {
-                    setState(() {
-                      selectedValue = value as String;
-                    });
-                    print("this is value === ${selectedValue}");
-                  },
-
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(title,
+          style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: normalFontSize
+          ),
+        ),
+        SizedBox(height: 10,),
+        Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+              border: Border.all(width: 1, color: Colors.grey.shade400)
+          ),
+          child: DropdownButtonHideUnderline(
+            child: DropdownButton2(
+              isExpanded: true,
+              hint: Text(
+                '${stringList[0]}',
+                style: TextStyle(
+                    fontSize: normalFontSize,
+                    color: AppColors.black
                 ),
               ),
+              items: stringList
+                  .map((item) => DropdownMenuItem<String>(
+                value: item,
+                child: Text(
+                  item,
+                  style:  TextStyle(
+                    fontSize: normalFontSize,
+                  ),
+                ),
+              ))
+                  .toList(),
+              value: selectedValue,
+              onChanged: (value) {
+                setState(() {
+                  selectedValue = value as String;
+                });
+                print("this is value === ${selectedValue}");
+              },
+
             ),
-          ],
-        );
+          ),
+        ),
+      ],
+    );
   }
 
   //add new dates
@@ -445,6 +449,7 @@ class _PTMAttendanceState extends State<PTMAttendance> {
                               child: Text("45",
                                 style: TextStyle(
                                   color: AppColors.black,
+                                  fontSize: normalFontSize
                                 ),
                               ),
                             ),
@@ -455,6 +460,7 @@ class _PTMAttendanceState extends State<PTMAttendance> {
                                 overflow: TextOverflow.clip,
                                 style: TextStyle(
                                   color: AppColors.black,
+                                  fontSize: normalFontSize
                                 ),
                               ),
                             ),
@@ -472,7 +478,7 @@ class _PTMAttendanceState extends State<PTMAttendance> {
                                   color:  AppColors.red,
                                   borderRadius: BorderRadius.circular(5)
                               ),
-                              child: Text("NO", style: TextStyle(color: AppColors.white),),
+                              child: Text("NO", style: TextStyle(color: AppColors.white, fontSize: normalFontSize)),
                             ),
                             Container(
                               padding: EdgeInsets.only(left: 7, right: 7, top: 4, bottom: 4),
@@ -480,7 +486,7 @@ class _PTMAttendanceState extends State<PTMAttendance> {
                                   color:  AppColors.green,
                                   borderRadius: BorderRadius.circular(5)
                               ),
-                              child: Text("Yes", style: TextStyle(color: AppColors.white),),
+                              child: Text("Yes", style: TextStyle(color: AppColors.white, fontSize: normalFontSize),),
                             ),
                           ],
                         ),

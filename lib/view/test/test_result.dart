@@ -5,6 +5,7 @@ import 'package:teachs/view_controller/app_input.dart';
 import 'package:teachs/view_controller/app_top_bar.dart';
 import 'package:intl/intl.dart';
 
+import '../../utility/app_const.dart';
 import '../../view_controller/app_button.dart';
 class TestResult extends StatefulWidget {
   const TestResult({Key? key}) : super(key: key);
@@ -87,7 +88,7 @@ class _TestResultState extends State<TestResult> {
                       padding: EdgeInsets.only(left: 20, right: 20, bottom: 15, top: 10),
                       child:  Text("Fill the required field",
                         style: TextStyle(
-                          fontSize: 17,
+                          fontSize: titleFontSize,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -146,7 +147,7 @@ class _TestResultState extends State<TestResult> {
                                 ),
                                 child: Center(child: Text("Done",
                                   style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: titleFontSize,
                                       fontWeight: FontWeight.w500,
                                       color: AppColors.white
                                   ),
@@ -330,8 +331,8 @@ class _TestResultState extends State<TestResult> {
       children: [
         Text(title,
           style: TextStyle(
-              fontWeight: FontWeight.w500,
-              fontSize: 16
+              fontWeight: FontWeight.w600,
+              fontSize: normalFontSize
           ),
         ),
         SizedBox(height: 10,),
@@ -346,7 +347,7 @@ class _TestResultState extends State<TestResult> {
               hint: Text(
                 '${stringList[0]}',
                 style: TextStyle(
-                    fontSize: 16,
+                    fontSize: normalFontSize,
                     color: AppColors.black
                 ),
               ),
@@ -355,8 +356,8 @@ class _TestResultState extends State<TestResult> {
                 value: item,
                 child: Text(
                   item,
-                  style: const TextStyle(
-                    fontSize: 14,
+                  style:  TextStyle(
+                    fontSize: normalFontSize,
                   ),
                 ),
               ))
