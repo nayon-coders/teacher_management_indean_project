@@ -149,13 +149,11 @@ class _QuerysState extends State<Querys> {
                                                 ],
                                               ),
                                             ),
-
                                           ],
                                         ),
                                       ),
                                   ],
                                 )
-
                             ],
                           ),
                         )
